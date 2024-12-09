@@ -77,10 +77,10 @@ nlu:
 
 - intent: bot_challenge
   examples: |
-    - bạn là bot?
-    - bạn là con người?
-    - tôi đang nói chuyện với bot à?
-    - tôi đang nói chuyện với một người à?
+    - bạn là bot
+    - bạn là con người
+    - tôi đang nói chuyện với bot à
+    - tôi đang nói chuyện với một người à
 
 - intent: need_help
   examples: |
@@ -139,6 +139,57 @@ nlu:
     - tìm giúp tôi sản phẩm có tên [webcam logitech c920](product_name)
     - tìm giúp tôi sản phẩm có tên [tai nghe hyperx cloud 2](product_name) giá dưới [1000000](price)
     - tìm giúp tôi sản phẩm có tên [tai nghe asus rog cetra core](product_name) giá dưới [1500000](price)
+    - tìm sản phẩm có [ổ cứng](spec_name) [512gb](spec_value)
+    - sản phẩm nào có [ram](spec_name) [16gb](spec_value)
+    - tìm [laptop](product_name) có [màn hình](spec_name) [oled](spec_value)
+    - có máy nào với [cpu](spec_name) [intel core i7](spec_value)
+    - tôi muốn tìm sản phẩm có [gpu](spec_name) [nvidia rtx 3060](spec_value)
+    - máy nào có [bàn phím](spec_name) [cơ](spec_value)
+    - có [màn hình](product_name) nào có [độ phân giải](spec_name) [4k](spec_value)
+    - [pc](product_name) nào sử dụng [ổ cứng](spec_name) [1tb ssd](spec_value)
+    - [laptop](product_name) nào có [ram](spec_name) [32gb](spec_value)
+    - tìm [màn hình](product_name) với [tần số quét](spec_name) [144hz](spec_value)
+    - máy nào có [ổ cứng](spec_name) [hdd 1tb](spec_value)
+    - sản phẩm có [ổ cứng](spec_name) [ssd 256gb](spec_value)
+    - tìm [laptop](product_name) với [ổ cứng](spec_name) [512gb ssd](spec_value)
+    - tôi muốn tìm [pc](product_name) có [ổ cứng](spec_name) [nvme](spec_value)
+    - có sản phẩm nào với [ổ cứng](spec_name) [hdd 2tb](spec_value)
+    - tìm máy với [ổ cứng](spec_name) [500gb](spec_value)
+    - [laptop](product_name) nào hỗ trợ [ổ cứng](spec_name) [256gb ssd](spec_value)
+    - [máy tính](product_name) nào có [ổ cứng](spec_name) [1tb hdd](spec_value)
+    - [pc](product_name) nào có [ổ cứng](spec_name) [128gb ssd](spec_value)
+    - có sản phẩm với [ổ cứng](spec_name) [2tb nvme](spec_value) không
+    - tìm sản phẩm có [ram](spec_name) [16gb ddr4](spec_value)
+    - máy nào có [ram](spec_name) [8gb ddr3](spec_value)
+    - [laptop](product_name) nào hỗ trợ [ram](spec_name) [32gb ddr5](spec_value)
+    - tìm [laptop](product_name) với [ram](spec_name) [64gb](spec_value)
+    - có sản phẩm nào với [ram](spec_name) [4gb ddr3](spec_value)
+    - tìm [máy tính](product_name) có [ram](spec_name) [16gb](spec_value)
+    - [laptop]](product_name) nào có [ram](spec_name) [32gb](spec_value)
+    - có sản phẩm nào với [ram](spec_name) [8gb ddr4](spec_value)
+    - tôi muốn tìm máy có [ram](spec_name) [128gb](spec_value)
+    - có máy nào hỗ trợ [ram](spec_name) [16gb ddr5](spec_value)
+    - tìm sản phẩm với [màn hình](spec_name) [oled](spec_value)
+    - có [laptop](product_name) nào có [màn hình](spec_name) [fhd](spec_value)
+    - sản phẩm nào hỗ trợ [màn hình](spec_name) [4k](spec_value)
+    - tôi cần màn hình với [tần số quét](spec_name) [165hz](spec_value)
+    - tìm máy với [kích thước màn hình](spec_name) [15.6 inch](spec_value)
+    - tìm sản phẩm với [gpu](spec_name) [amd radeon](spec_value)
+    - máy nào có [kích thước màn hình](spec_name) [13 inch](spec_value)
+    - có màn hình nào với [độ sáng](spec_name) [300 nits](spec_value)
+    - [laptop](product_name) nào hỗ trợ [màn hình](spec_name) [ips](spec_value)
+    - sản phẩm nào có [ram](spec_name) [64gb ddr5](spec_value)
+    - tôi muốn tìm sản phẩm với [cpu](spec_name) [ryzen 9](spec_value)
+    - [máy tính](product_name) nào có [ổ cứng](spec_name) [500gb hdd](spec_value)
+    - có [pc](product_name) nào hỗ trợ [gpu](spec_name) [nvidia rtx 4090](spec_value)
+    - sản phẩm nào có [cpu](spec_name) [intel core i5](spec_value)
+    - [laptop](product_name) nào hỗ trợ [ram](spec_name) [8gb](spec_value)
+    - tìm [màn hình](product_name) với [tần số quét](spec_name) [240hz](spec_value)
+    - tìm [laptop]](product_name) với [gpu](spec_name) [gtx 1660 ti](spec_value)
+    - tôi muốn [pc](product_name) có [ram](spec_name) [128gb ddr4](spec_value)
+    - có máy nào với [ổ cứng](spec_name) [hdd 500gb](spec_value)
+    - [laptop](product_name) nào hỗ trợ [màn hình](spec_name) [retina](spec_value)
+    - tìm [máy tính](product_name) với [ram](spec_name) [32gb ddr5](spec_value)
 
 - intent: find_product_by_brand
   examples: |
