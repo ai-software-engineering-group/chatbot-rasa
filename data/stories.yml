@@ -1,0 +1,102 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: find product by price
+  steps:
+    - intent: find_product
+      entities:
+        - price: "500000"
+    - action: utter_ask_price
+
+- story: find product by product name
+  steps:
+    - intent: find_product
+      entities:
+        - product_name: "áo sơ mi"
+    - action: utter_ask_product_name
+
+- story: find product by product code
+  steps:
+    - intent: find_product
+      entities:
+        - product_code: "ACER-PREDATOR-HELIOS-300"
+    - action: utter_ask_product_code
+
+- story: find product by spec
+  steps:
+    - intent: find_product
+      entities:
+        - spec_name: "ổ cứng"
+        - spec_value: "512GB"
+    - action: utter_ask_product_spec
+
+- story: find product by brand
+  steps:
+    - intent: find_product_by_brand
+      entities:
+        - brand: "Acer"
+    - action: utter_ask_product_brand
+
+- story: find product by category
+  steps:
+    - intent: find_product_by_category
+      entities:
+        - brand: "Laptop"
+    - action: utter_ask_product_category
+
+- story: track order
+  steps:
+    - intent: track_order
+      entities:
+        - order_code: "DH12345"
+    - action: utter_track_order
+
+- story: track order 2
+  steps:
+    - intent: track_order
+      entities:
+        - order_code: "DH12345"
+    - action: utter_track_order
+
+- story: current order
+  steps:
+    - intent: current_order
+    - action: utter_current_order
+
+- story: delivering policy
+  steps:
+    - intent: delivering_policy
+    - action: utter_delivering_policy
+
+- story: payment policy
+  steps:
+    - intent: payment_policy
+    - action: utter_payment_policy

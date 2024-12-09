@@ -1,0 +1,240 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - ê
+    - chào
+    - xin chào
+    - có đó không
+    - chào buổi sáng
+    - chào buổi trưa
+    - chào buổi chiều
+    - hey
+    - hello
+    - hi
+    - bắt đầu nào
+
+- intent: goodbye
+  examples: |
+    - tạm biệt
+    - biệt
+    - vình biệt
+    - google
+    - see ya
+    - ngủ ngon
+    - chúc một ngày tốt lành
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - có
+    - yes
+    - yeah
+    - ok
+    - nghe hay đó
+    - đúng z
+    - đúng vậy
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - không
+    - tôi không nghĩ vậy
+    - sai rồi
+    - sai
+    - không thể nào
+    - sai lầm
+    - s
+
+- intent: mood_great
+  examples: |
+    - tuyệt vời
+    - tuyệt
+    - perfect
+    - quá hay luôn
+    - hay
+    - rất tốt
+    - tốt
+    - rất tuyệt
+    - rất tuyệt vời
+    - tuyệt vời quá
+
+- intent: mood_unhappy
+  examples: |
+    - hôm nay tệ quá
+    - tôi buồn
+    - tệ quá
+    - buồn ghê
+    - buồn
+    - tôi không vui
+    - không vui
+    - tôi buồn quá
+    - sad
+
+- intent: bot_challenge
+  examples: |
+    - bạn là bot?
+    - bạn là con người?
+    - tôi đang nói chuyện với bot à?
+    - tôi đang nói chuyện với một người à?
+
+- intent: need_help
+  examples: |
+    - tôi cần giúp đỡ
+    - tôi cần giúp
+    - tôi cần một chút giúp đỡ
+    - tôi cần một chút giúp
+    - tôi cần một chút hỗ trợ
+    - tôi cần hỗ trợ
+    - giúp tôi cái này được không
+    - giúp tôi cái này
+    - giúp tôi cái này với
+    - giúp
+
+- intent: find_product
+  examples: |
+    - tìm sản phẩm giá [500000](price)
+    - tôi muốn mua sản phẩm khoảng [700000](price)
+    - sản phẩm nào có giá dưới [300000](price)
+    - tôi muốn đặt sản phẩm mã [sp12345](product_code)
+    - tìm sản phẩm có mã [qeqweocakw](product_code)
+    - tìm giúp tôi sản phẩm có tên [laptop acer predator](product_name)
+    - sản phẩm nào có tên [laptop dell inspiron 15](product_name)
+    - có sản phẩm nào tên [laptop asus rog strix](product_name) không
+    - có sản phẩm nào tên [chuột không dây](product_name) không
+    - tìm sản phẩm có [ổ cứng](spec_name) [512gb](spec_value)
+    - sản phẩm nào có [ram](spec_name) là [16gb](spec_value)
+    - sản phẩm nào có [màn hình](spec_name) [oled](spec_value)
+    - tìm sản phẩm [tai nghe hyperx cloud 2](product_name)
+    - tìm sản phẩm [tai nghe asus rog cetra core](product_name)
+    - tìm sản phẩm [tai nghe moondrop chu](product_name)
+    - tìm sản phẩm [laptop dell inspiron 15](product_name) giá dưới [10000000](price)
+    - tìm sản phẩm [laptop asus rog strix](product_name) giá dưới [15000000](price)
+    - tìm sản phẩm [laptop acer predator](product_name) giá dưới [20000000](price)
+    - tìm sản phẩm [laptop dell inspiron 15](product_name) giá dưới [10000000](price) có [ram](spec_name) [16gb](spec_value)
+    - tìm sản phẩm [laptop asus rog strix](product_name) giá dưới [15000000](price) có [ram](spec_name) [16gb](spec_value)
+    - tìm sản phẩm [laptop acer predator](product_name) giá dưới [20000000](price) có [ram](spec_name) [16gb](spec_value)
+    - tìm sản phẩm [laptop dell inspiron 15](product_name) giá dưới [10000000](price) có [màn hình](spec_name) [15.6 inch](spec_value) và [ổ cứng](spec_name) [512gb](spec_value)
+    - tìm sản phẩm [laptop asus rog strix](product_name) giá dưới [15000000](price) có [màn hình](spec_name) [16 inch](spec_value) và [ổ cứng](spec_name) [512gb](spec_value)
+    - tìm sản phẩm [laptop acer predator](product_name) giá dưới [20000000](price) có [ram](spec_name) [16gb](spec_value) và [ổ cứng](spec_name) [512gb](spec_value)
+    - có [tai nghe](product_name) nào giá dưới [500000](price) không
+    - có [tai nghe](product_name) nào giá dưới [1000000](price) không
+    - có [màn hình] giá dưới [5000000](price) không
+    - có [chuột](product_name) giá dưới [500000](price) không
+    - sản phẩm nào có [ram](spec_name) [16gb](spec_value) giá dưới [10000000](price)
+    - sản phẩm nào có [bàn phím](spec_name) [rgb](spec_value) giá dưới [15000000](price)
+    - sản phẩm [tai nghe razer kraken](product_name) có giá bao nhiêu
+    - sản phẩm [tai nghe steelseries arctis 3](product_name) có giá bao nhiêu
+    - sản phẩm [tai nghe hyperx cloud 2](product_name) có giá bao nhiêu
+    - sản phẩm [laptop dell inspiron 15](product_name) có giá bao nhiêu
+    - tìm giúp tôi sản phẩm có tên [laptop acer predator](product_name)
+    - tìm giúp tôi sản phẩm có tên [tai nghe moondrop chu 2](product_name)
+    - tìm giúp tôi sản phẩm có tên [chuột không dây logitech g304](product_name)
+    - tìm giúp tôi sản phẩm có tên [bàn phím cơ razer blackwidow](product_name)
+    - tìm giúp tôi sản phẩm có tên [màn hình dell s2421hgf](product_name)
+    - tìm giúp tôi sản phẩm có tên [webcam logitech c920](product_name)
+    - tìm giúp tôi sản phẩm có tên [tai nghe hyperx cloud 2](product_name) giá dưới [1000000](price)
+    - tìm giúp tôi sản phẩm có tên [tai nghe asus rog cetra core](product_name) giá dưới [1500000](price)
+
+- intent: find_product_by_brand
+  examples: |
+    - tìm sản phẩm của [dell](brand)
+    - sản phẩm của hãng [asus](brand) có gì
+    - sản phẩm của hãng [acer](brand) có gì
+    - sản phẩm của hãng [hp](brand) có gì
+    - sản phẩm của hãng [lenovo](brand) có gì
+    - có sản phẩm nào của hãng [moondrop](brand) không
+    - có sản phẩm nào của hãng [hyperx](brand) không
+    - tôi muốn tìm một sản phẩm của hãng [razer](brand)
+    - tôi muốn tìm một sản phẩm của hãng [asus](brand)
+    - tôi muốn tìm một sản phẩm của hãng [steelseries](brand)
+    - hãy gợi ý cho tôi vài sản phẩm của hãng [logitech](brand)
+    - gợi ý một vài sản phẩm của hãng [acer](brand)
+    - gợi ý một vài sản phẩm của hãng [hp](brand)
+    - hãng [dell](brand) có sản phẩm gì
+    - hãng [dell](brand) có sản phẩm gì
+    - hãng [asus](brand) có sản phẩm gì
+    - hãng [acer](brand) có sản phẩm gì
+    - hãng [hp](brand) có gì mới không
+
+- intent: find_product_by_category
+  examples: |
+    - tìm sản phẩm [laptop](category)
+    - [tai nghe](category) có gì mới không
+    - [chuột](category) có gì
+    - tôi muốn tìm vài sản phẩm của danh mục [màn hình](category)
+    - [bàn phím](category) có sản phẩm gì
+    - có sản phẩm nào của danh mục [webcam](category) không
+    - có sản phẩm nào của danh mục [thiết bị mạng](category) không
+    - danh mục [tai nghe](category) có sản phẩm gì
+    - danh mục [chuột](category) có sản phẩm gì
+    - hãy gợi ý cho tôi vài sản phẩm của danh mục [laptop](category)
+    - hãy gợi ý cho tôi vài sản phẩm của danh mục [màn hình](category)
+    - hãy gợi ý cho tôi vài sản phẩm của danh mục [tai nghe](category)
+    - hãy gợi ý cho tôi vài sản phẩm của danh mục [bàn phím](category)
+    - hãy gợi ý cho tôi vài sản phẩm của danh mục [chuột](category)
+    - hãy gợi ý cho tôi vài sản phẩm [laptop](category)
+    - hãy gợi ý cho tôi vài sản phẩm [màn hình](category)
+    - hãy gợi ý cho tôi vài sản phẩm [tai nghe](category)
+    - hãy gợi ý cho tôi vài sản phẩm [bàn phím](category)
+    - hãy gợi ý cho tôi vài sản phẩm [chuột](category)
+    - danh mục [laptop](category) có sản phẩm gì
+
+- intent: track_order
+  examples: |
+    - kiểm tra đơn hàng mã [dh12345](order_code)
+    - đơn hàng [od56789](order_code) của tôi ở đâu
+    - tra cứu đơn hàng [od001](order_code)
+    - tôi muốn biết tình trạng của đơn hàng mã [20211203dhjahwe](order_code)
+    - đơn hàng [dh12345](order_code) đã giao chưa
+    - đơn hàng [od56789](order_code) đã chuyển đi chưa
+    - đơn hàng [od001](order_code) đã được xác nhận chưa
+    - đã xác nhận đơn hàng [20211203dhjahwe](order_code) chưa
+
+- intent: current_order
+  examples: |
+    - đơn hàng hiện tại
+    - đơn hàng đang giao
+    - đơn hàng đang chuyển đi
+    - đơn hàng đang xác nhận
+    - đơn hàng đang xử lý
+    - đơn hàng gần nhất là gì
+    - bạn có thể tìm đơn hàng tôi vừa đặt không
+    - tôi muốn biết đơn hàng gần nhất của tôi
+    - đơn hàng gần nhất của tôi là gì
+    - đơn hàng gần nhất
+
+- intent: delivering_policy
+  examples: |
+    - chính sách giao hàng
+    - chính sách vận chuyển
+    - chính sách giao hàng của bạn
+    - hãy cho tôi biết về chính sách giao hàng
+    - chính sách giao hàng là gì
+    - chính sách vận chuyển của bạn
+    - hãy cho tôi biết về chính sách vận chuyển
+    - chính sách vận chuyển là gì
+    - bạn có chính sách giao hàng không
+    - bạn có chính sách vận chuyển không
+    - chính sách giao hàng của bạn như thế nào
+    - chính sách vận chuyển của bạn như thế nào
+
+- intent: payment_policy
+  examples: |
+    - chính sách thanh toán
+    - chính sách thanh toán của bạn
+    - hãy cho tôi biết về chính sách thanh toán
+    - chính sách thanh toán là gì
+    - bạn có chính sách thanh toán không
+    - chính sách thanh toán của bạn như thế nào
+    - bạn chấp nhận thanh toán bằng cách nào
+    - tôi có thể thanh toán bằng cách nào
+    - làm thế nào để thanh toán
+    - làm sao để thanh toán
+    - thanh toán như thế nào
+    - hãy hướng dẫn tôi cách thanh toán
+    - hướng dẫn tôi cách thanh toán

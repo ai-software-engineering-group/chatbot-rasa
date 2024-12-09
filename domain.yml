@@ -1,0 +1,143 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - need_help 
+  - find_product
+  - find_product_by_brand
+  - find_product_by_category
+  - track_order
+  - current_order
+  - delivering_policy
+  - payment_policy
+
+entities:
+  - price
+  - product_code
+  - product_name
+  - spec_name
+  - spec_value
+  - brand
+  - category
+  - order_code
+
+slots:
+  price:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: price
+
+  product_code:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: product_code
+
+  product_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: product_name
+
+  spec_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: spec_name
+
+  spec_value:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: spec_value
+
+  brand:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: brand
+  
+  category:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: category
+
+  order_code:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: order_code
+
+
+responses:
+  utter_greet:
+  - text: "Chào! Tôi có thể giúp gì cho bạn không?"
+  - text: "Xin chào! Bạn cần tôi giúp gì không?"
+  - text: "Chào bạn! Chúc bạn một ngày tốt lành!"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+
+  utter_did_that_help:
+  - text: "Điều này có giúp được gì cho bạn không?"
+
+  utter_happy:
+  - text: "Tuyệt vời, tiếp tục nào!!!"
+
+  utter_goodbye:
+  - text: "Tạm biệt!"
+  - text: "Hẹn gặp lại bạn sau nhé!"
+  - text: "Chúc bạn một ngày tốt lành!"
+  - text: "Bye bye!"
+  - text: "Bye bye! Chúc bạn một ngày tốt lành."
+
+  utter_iamabot:
+  - text: "Tôi chỉ là một bot, bạn đừng nghĩ nhiều nhé!"
+
+  utter_help:
+  - text: "Tôi rất vui nếu có thể giúp bạn việc gì đó."
+  - text: "Tôi sẽ cố gắng giúp bạn mọi lúc."
+  - text: "Có gì tôi có thể giúp bạn không?"
+
+  utter_ask_price:
+  - text: "Bạn muốn tìm sản phẩm trong khoảng giá nào?"
+
+  utter_ask_product_code:
+  - text: "Vui lòng cung cấp mã sản phẩm bạn muốn tìm."
+    
+  utter_ask_product_spec:
+  - text: "Vui lòng cung cấp thông số sản phẩm bạn muốn tìm."
+
+  utter_ask_product_name:
+  - text: "Vui lòng cung cấp tên sản phẩm bạn muốn tìm."
+
+  utter_ask_product_brand:
+  - text: "Vui lòng cung cấp hãng của sản phẩm bạn muốn tìm."
+
+  utter_ask_product_category:
+  - text: "Vui lòng cung cấp danh mục của sản phẩm bạn muốn tìm."
+  
+  utter_track_order:
+  - text: "Vui lòng cung cấp mã đơn hàng để kiểm tra."
+
+  utter_current_order:
+  - text: "Dưới đây là các đơn hàng gần nhất của bạn."
+
+  utter_delivering_policy:
+  - text: "Chính sách giao hàng của chúng tôi như sau:"
+  - text: "Chính sách vận chuyển của chúng tôi như sau:"
+
+  utter_payment_policy:
+  - text: "Chính sách thanh toán của chúng tôi như sau:"
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
